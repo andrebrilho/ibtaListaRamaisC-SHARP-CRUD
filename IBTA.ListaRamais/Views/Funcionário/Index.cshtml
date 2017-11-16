@@ -1,0 +1,73 @@
+﻿<div class="bg">
+    <div class="panel">
+        <div class="panel-header">
+            @model IEnumerable<IBTA.ListaRamais.Models.Funcionário>
+            @{
+                ViewBag.Title = "Index";
+            }
+            <h2 class="text-center text-info">Lista de Funcionários</h2>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CodigoDepartamento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Departamento)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ramal)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Cargo)
+                    </th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CodigoDepartamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Departamento)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ramal)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Cargo)
+                        </td>
+                        <td>
+                            @Html.ActionLink(" ", "Edit", new { id = item.CodigoFuncionario }, new { @class = "imgLinkButtonEditar" })
+                            @Html.ActionLink(" ", "Details", new { id = item.CodigoFuncionario }, new { @class = "imgLinkButtonDetalhes" })
+                            @Html.ActionLink(" ", "Delete", new { id = item.CodigoFuncionario }, new { @class = "imgLinkButtonExcluir" })
+                        </td>
+                    </tr>
+
+                }
+            </table>
+
+            <br><br>
+            <p class="text-right text-info">
+        </div>
+        <div class="panel-footer">
+            @Html.ActionLink("Criar um Novo Funcionário", "Create")
+            </p>
+        </div>
+
+    </div>
+</div>

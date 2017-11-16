@@ -1,0 +1,130 @@
+﻿html, body {
+      background: url('bg.jpg')no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.sombra{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.conteudo{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+.card-login{
+    width: 500px;
+    align-self:center;
+    background-color:rgba(255,255,255,1);
+}
+
+.transparente{
+    background-color:rgba(255,255,255,.2); 
+
+}
+
+.form-control{
+    border-color:#5bc0de;
+    align-self:center;
+    width:450px;
+}
+
+.form-horizontal{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.cpologin{
+    align-self:center;
+    padding-left: 10px;
+    padding-bottom:5px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.underline{
+    color: #5bc0de;
+
+}
+.entrar{
+     display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+.btn-margin{
+    margin:15px;
+    padding-left:40px; 
+    padding-right:40px;
+}
+
+.btn-round-md{
+border-radius: 22.5px;
+}
+.btn-round{
+border-radius: 17px;
+}
+
+.form-control::-webkit-input-placeholder { color: #5bc0de; }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: #5bc0de; }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: #5bc0de; }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: #5bc0de; }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: #5bc0de; }  /* Microsoft Edge */
+
+/*css para contact*/
+
+.box{
+    margin-top:50px;
+}
+
+.card-group{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+
+}
+
+.card-img-top{
+    width: 180px;
+    height: 180px;
+}
+
+.panel{
+    margin-top: 20px;
+}
+
+
+.margin-top-bottom{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.margin-top-100px{
+    margin-top: 100px;
+}
+
+.margin-top-20px{
+    margin-top: 20px;
+}

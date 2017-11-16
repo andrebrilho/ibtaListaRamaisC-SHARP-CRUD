@@ -1,0 +1,67 @@
+﻿@model IBTA.ListaRamais.Models.Funcionário
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center text-info">Detalhes</h2>
+<br><br>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDepartamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDepartamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ramal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ramal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(" ", "Edit", new { id = Model.CodigoFuncionario } , new { @class = "imgLinkButtonEditar" })  |
+    @Html.ActionLink("Voltar", "Index")
+</p>

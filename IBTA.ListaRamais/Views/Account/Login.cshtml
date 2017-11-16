@@ -1,0 +1,99 @@
+﻿<!--
+<div class="panel">
+    <div class="panel-heading">
+
+        <h2 class="text-center text-info">@ViewBag.Title.</h2>
+    </div>
+    <div class="panel-body">
+    <div class="row">
+        <div class="col-md-8">
+            <section id="loginForm">
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <div class="checkbox">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Efetuar login" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                    <p>
+                        @Html.ActionLink("Registrar-se como novo usuário", "Register")
+                    </p>
+                    @* Ativar isso assim que você tiver a confirmação de conta ativada para a funcionalidade de redefinição de senha
+                        <p>
+                            @Html.ActionLink("Esqueceu sua senha?", "ForgotPassword")
+                        </p>*@
+                }
+                </div>
+            </section>
+        </div><!--
+        <div class="col-md-4">
+            <section id="socialLoginForm">
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>-->
+  
+@using IBTA.ListaRamais.Models
+@model LoginViewModel
+@{
+            ViewBag.Title = "Efetuar login";
+}
+<div class="margin-top-100px">
+    <div class="conteudo">
+        <div class="card sombra card-login">
+            <div class="card-block">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <!-- Text input--><hr /><h3 class="text-center text-info">Listas de Ramais</h3><hr />
+                        <div class="cpologin">
+                            <input id="" name="" type="text" placeholder="Login" class="form-control text-info input-md text-info">
+                        </div>
+                        <!-- Password input-->
+                        <div class="cpologin">
+                            <input id="" name="" type="password" placeholder="Senha" class="form-control text-info input-md">
+                        </div>
+            </div>
+            <!-- Button (Double) -->
+            <div class="entrar">
+                <button type="button" id="" name="" class="cpologin btn-margin btn btn-info btn-round-md btn-md">ENTRAR</button>
+                <p class="text-center underline text-info col-lg-12">__________________ ou __________________</p>
+            </div>
+            <div class="entrar">
+                <button type="button" id="" name="" class="cpologin btn-margin btn-round-md btn-md btn btn-outline-info">registrar</button>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+</div>
